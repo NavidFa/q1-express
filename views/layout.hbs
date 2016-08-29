@@ -2,9 +2,95 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Amiko|Arima+Madurai|Farsan|Lalezar|Mogra|Rakkas|Arimo|Rasa|Shrikhand|Suez+One|Yatra+One" rel="stylesheet">
   </head>
-  <body>
-    {{{body}}}
-  </body>
+
+    <body>
+        <div class="wrapper">
+            <div class="headbox">
+                <div class="headline">
+                    <h3 id="headline">This app provides user with the information about climate data ,  agricultural production and GDP per capita for  a certain country  within a requested period of time.</h3>
+                </div>
+                <div class="form-box">
+                    <form class="form-horizontal" id="country-form">
+                        <div class="form-group">
+                            <label for="select" class="Label">Select A Country:</label>
+                            <select class="form-control" id="select-country">
+                                <option></option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="select" class="Label">Select Start Date:</label>
+                            <select class="form-control" id="start-date">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="select" class="label">Select End Date:</label>
+                            <select class="form-control" id="end-date">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="form-group-btn">
+                            <button type="reset" class="btn-form" id="cancel">Cancel</button>
+                            <button type="submit" class="btn-form" id="submit" disabled="true">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="background">
+
+            </div>
+            <div class="alarm">
+                <h2 id="nodata"></h1>
+                <h3 id="newcountry"></h3>
+            </div>
+            <div class="result">
+              <div class="gdp">
+            <div id="chartgdp_div">
+            </div>
+            </div>
+            <div class="map">
+                <div class="annualpr">
+                    <p>
+                        Annual average precipitation is (mm) he arithmetically averaged total amount of precipitation recorded during a calendar year. The main forms of precipitation include drizzle, rain, sleet, snow, graupel and hail.
+                    </p>
+                </div>
+                <div id="regions_div"></div>
+            </div>
+            <div class="gauge">
+              <div class="food">
+
+
+                <div id="chart_div"></div>
+                <div class="gaugetext">
+                    <p>
+                        The<span id="bold"> food production per capita index </span>presents net food production (after deduction for feed and seed) of a country's agricultural sector per person relative to the base period 1999-2001. The food production per capita index covers all edible agricultural
+                        products that contain nutrients; coffee and tea are excluded.
+                    </p>
+                </div>
+                  </div>
+                  <div class="live">
+                <div class="gaugetext">
+                    <p>
+                        <span id="bold">Livestock production index </span>is an indicators to monitor production from the livestock resources. It includes the total volume of meat, milk, eggs and wool produced, which should be considered by species. Total quantities of similar commodities should be aggregated and compared through
+                        time.
+                    </p>
+                </div>
+                  <div id="chart2_div"></div>
+                </div>
+            </div>
+          </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>    <script type="text/javascript" src="javascripts/main.js"></script>
+        </div>
+    </body>
+
 </html>
